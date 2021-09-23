@@ -106,3 +106,7 @@
 .card:hover .card-meta h5 {
   @apply text-indigo-400;
 }
+
+.section-footer {
+  background-color: #161a4f;
+}
