@@ -6,7 +6,6 @@
 
 .header-clipping {
   @apply relative;
-  overflow: hidden;
 }
 
 .header-clipping .container {
@@ -25,8 +24,9 @@
   background: transparent linear-gradient(130.09deg, #3d47bd 0%, #2e37a4 50.8%);
 }
 
-.header-clipping::before {
-  @apply w-full bg-indigo-800 inset-0 absolute;
+.header-clipping:before {
+  @apply w-full inset-0 absolute;
+  background: #2e37a4;
   content: "";
   height: 648px;
   clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
