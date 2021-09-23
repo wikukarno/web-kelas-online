@@ -32,7 +32,7 @@ export default function Header({ onLight }) {
             <a
               className={[
                 linkcolor,
-                "text-white hover:text-teal-500 text-lg px-6 py-3",
+                "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
               ].join(" ")}>
               Home
             </a>
@@ -43,7 +43,7 @@ export default function Header({ onLight }) {
             <a
               className={[
                 linkcolor,
-                "text-white hover:text-teal-500 text-lg px-6 py-3",
+                "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
               ].join(" ")}>
               Pricing
             </a>
@@ -54,7 +54,7 @@ export default function Header({ onLight }) {
             <a
               className={[
                 linkcolor,
-                "text-white hover:text-teal-500 text-lg px-6 py-3",
+                "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
               ].join(" ")}>
               Features
             </a>
@@ -65,7 +65,7 @@ export default function Header({ onLight }) {
             <a
               className={[
                 linkcolor,
-                "text-white hover:text-teal-500 text-lg px-6 py-3",
+                "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
               ].join(" ")}>
               Story
             </a>
@@ -76,7 +76,7 @@ export default function Header({ onLight }) {
             target='_blank'
             rel='noopener noereffer'
             href={linkCTA}
-            className='bg-indigo-700 hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 ml-6'>
+            className='bg-indigo-700 hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 font-medium ml-6'>
             {textCTA}
           </a>
         </li>
