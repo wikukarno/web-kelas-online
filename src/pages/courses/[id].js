@@ -2,6 +2,7 @@ import Head from "next/head";
 import courses from "src/constants/api/courses";
 
 import Youtube from "react-youtube";
+import Header from "src/parts/Header";
 
 function DetailsCourse({ data }) {
   console.log(data);
@@ -33,6 +34,18 @@ function DetailsCourse({ data }) {
               }}></Youtube>
           </div>
         )}
+        <div className='absolute inset-0 z-0 w-full h-full bg-black opacity-75'></div>
+        <div className='meta-title absolute inset-0 object-fill z-0 w-full flex justify-center items-center'>
+          <div className='text-center'>
+            <h3 className='text-lg text-white'>Kelas Online :</h3>
+            <h4 className='text-6xl text-teal-500 font-semibold'>
+              {data?.name ?? "Nama Kelas"}
+            </h4>
+          </div>
+        </div>
+        <div className='container mx-auto z-10 relative'>
+          <Header></Header>
+        </div>
       </section>
     </>
   );
