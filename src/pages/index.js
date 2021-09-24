@@ -1,7 +1,5 @@
 import Head from "next/head";
 
-import axios from "src/configs/axios";
-
 import Circle from "public/images/circle-accent-1.svg";
 
 import Header from "src/parts/Header";
