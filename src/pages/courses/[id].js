@@ -1,32 +1,29 @@
 import Head from "next/head";
 import Link from "next/link";
+import courses from "src/constants/api/courses";
 
-function Todo({ data }) {
+function DetailsCourse({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
-        <title>Micro | Random | {data.title}</title>
+        <title>Micro</title>
       </Head>
 
-      <main className='container mt-12 mx-auto'>
-        <h1 className='text-3xl text-blue-700'>{data.title}</h1>
-        <Link href='/random'>
-          <a>random</a>
-        </Link>
-      </main>
+      <section
+        className='pt-10 relative overflow-hidden'
+        style={{ height: 600 }}></section>
     </>
   );
 }
 
-Todo.getInitialProps = async (props) => {
+DetailsCourse.getInitialProps = async (props) => {
   const { id } = props.query;
   try {
-    const data = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then((response) => response.json())
-      .then((json) => json);
+    const data = await courses.details(id);
 
     return { data };
   } catch (error) {}
 };
 
-export default Todo;
+export default DetailsCourse;
