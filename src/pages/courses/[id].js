@@ -13,6 +13,7 @@ import Certificate from "public/images/icon-certificate.svg";
 import Feature from "src/parts/Details/Fetaure";
 import CoursePhoto from "src/parts/Details/CoursePhoto";
 import Footer from "src/parts/Footer";
+import RenderPreview from "src/parts/Details/RenderPreview";
 
 function DetailsCourse({ data }) {
   console.log(data);
@@ -159,6 +160,20 @@ function DetailsCourse({ data }) {
                   <div className='w-full text-center py-12'>No Item Found</div>
                 )}
               </div>
+            </section>
+
+            {/* Rendering Previews */}
+            <section className='mt-10'>
+              <h6 className='font-medium text-gray-900 text-2xl mb-4'>
+                You Will <span className='text-teal-500'>Learn</span>
+              </h6>
+              {data?.chapters?.length > 0 ? (
+                <RenderPreview previews={data.chapters}></RenderPreview>
+              ) : (
+                <div className='w-full text-center py-12'>
+                  No Chapters Found
+                </div>
+              )}
             </section>
           </div>
         </div>
