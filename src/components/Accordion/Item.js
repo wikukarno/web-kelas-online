@@ -33,7 +33,9 @@ export default function item({ name, id, child, active, toggle, children }) {
           timeout={500}
           onEnter={calcHeight}
           className='accordion-item'>
-          <div className='accordion-item py-2 bg-gray-100'>{children}</div>
+          <div className='accordion-item'>
+            <div className='py-2 bg-gray-100'>{children}</div>
+          </div>
         </CSSTransition>
       </div>
     </div>

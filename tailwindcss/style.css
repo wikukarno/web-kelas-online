@@ -191,3 +191,20 @@
 .section-footer {
   background-color: #161a4f;
 }
+
+.accordion-item {
+  @apply transition-all duration-300;
+}
+
+.acordion-item-enter {
+  opacity: 0;
+}
+.acordion-item-enter-active {
+  opacity: 1;
+}
+.acordion-item-exit {
+  opacity: 1;
+}
+.acordion-item-exit-active {
+  opacity: 0;
+}
