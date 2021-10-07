@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
+import IconStar from "public/images/icon-star.svg";
 
-export default function Star({ className, value, heigh, width }) {
+export default function Star({ className, value, height, width }) {
   const star = [];
   let leftPos = 0;
 
@@ -27,13 +28,18 @@ export default function Star({ className, value, heigh, width }) {
     );
   }
   return (
-    <div className={["stars", className].join(" ")} style={{ height: height }}>
-      {starPlaceolder}
-      {star}
-    </div>
+    <>
+      <div
+        className={["stars", className].join(" ")}
+        style={{ height: height }}>
+        {starPlaceolder}
+        {star}
+      </div>
+      <IconStar></IconStar>
+    </>
   );
 }
-Star.PropTypes = {
+Star.propTypes = {
   className: propTypes.string,
   value: propTypes.number,
   width: propTypes.number,
