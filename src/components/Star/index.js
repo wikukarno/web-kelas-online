@@ -20,11 +20,22 @@ export default function Star({ className, value, heigh, width }) {
   for (let index = 0; index < 5; index++) {
     starPlaceolder.push(
       <div
-        className='star'
-        key={`star-${index}`}
+        className='star placeholder'
+        key={`starPlaceolder-${index}`}
         style={{ left: index * width, height: height, width: width }}
       />,
     );
   }
-  return <div></div>;
+  return (
+    <div className={["stars", className].join(" ")} style={{ height: height }}>
+      {starPlaceolder}
+      {star}
+    </div>
+  );
 }
+Star.PropTypes = {
+  className: propTypes.string,
+  value: propTypes.number,
+  width: propTypes.number,
+  heigh: propTypes.number,
+};
